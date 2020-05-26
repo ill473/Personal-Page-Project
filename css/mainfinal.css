@@ -1,0 +1,234 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(187, 176, 176);
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100%;
+}
+
+/*This is just to get navabr to stick to top*/
+#navbar{
+    overflow:hidden;
+    background-color: rgb(36, 33, 33);
+    box-shadow: 5px 10px 20px #888888;
+}
+
+#navbar a{
+    float:right;
+    display:block;
+    color: rgb(215, 215, 224);
+    text-align: center;
+    padding:21px 25px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navbar a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+.sticky + .content {
+    padding-top: 60px;
+}
+
+/*Now we can style each class section*/
+.About{
+    background-color:rgb(243, 236, 236);
+    color:rgb(41, 40, 40);
+    height: 37.5vh; /*This was height of view port for free code camp*/
+
+}
+
+.Work{
+    background-color:rgb(58, 55, 55);
+    color:whitesmoke;
+}
+
+
+.Contact{
+    background-color:rgb(140, 134, 151);
+    color:black;
+}
+
+
+.About{
+    padding:9em;
+    transition: 0.7s ease;
+}
+
+.Work{
+    padding: 4em 9em;
+}
+
+.Contact{
+    padding: 8em;
+}
+
+.Contact header{
+    text-align: center;
+    font-size: 2em;
+}
+
+.About header{
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 7em;
+    padding-top: 1.5em;
+}
+
+.About header h3, .Contact header h3{
+    font-style: italic;
+}
+
+.Work header{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 3em;
+}
+
+/*Keep Picture links organised*/
+#ArtPic, #CodePic{
+    width : 23.5em;
+    height: 23.2em;
+    padding-left: 4em;
+}
+
+
+/*Organise their spacing*/
+.column{
+    float:left;
+    width:44%;
+    padding: 12px;
+}
+
+/*Clear extra space from floats*/
+.row:after{
+    content:"";
+    display:table;
+    clear: both;
+}
+
+/*Make them stack ontop each other if screen smaller*/
+@media screen and (max-width:600px){
+    .column{
+        width:100%;
+    }
+}
+
+/*Now let's those clickable pictures look awesome*/
+.project-tile{
+    position:relative;
+    width: 50%;
+    max-width: 200px;
+}
+
+.images{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay{
+    position: absolute;
+    bottom:0;
+    background: black;
+    background: rgba(0,0,0,0.5);
+    color: #f1f1f1;
+    width: 100%;
+    transition: 0.7s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px 88px;
+    text-align: center;
+    margin-left:64px;
+}
+
+.project-tile:hover .overlay{
+    opacity:1;
+}
+
+
+/*Styles for icons in Contact section*/
+
+.contact-icons{
+    padding-left: 5em;
+}
+#FBPic, #twitterPic, #IGPic, #emailPic, #phonePic{
+    width:2em;
+    height: 2em;
+    display: inline-block;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.contact-icons td{
+    padding:58px;
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(36, 33, 33);
+    color:whitesmoke;
+    padding:0.5em;
+}
+
+
+#FBPic:hover, #twitterPic:hover, #IGPic:hover, #emailPic:hover, #phonePic:hover{
+    transform: translate(0px,20px);
+}
+
+/*Buttons*/
+.button{
+    padding:1em;
+    margin-left:8.5em;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgb(36, 33, 33);
+    border:none;
+    text-align: center;
+    font-size: 18px;
+    transition: all 0.6.s;
+   
+}
+
+#profile-link{
+    color:whitesmoke;
+    cursor: pointer;
+}
+
+.button span{
+    cursor: pointer;
+    display: inline block;
+    position: relative;
+    transition: 0.6;
+}
+
+.button span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.4s;
+}
+
+.button:hover span{
+    padding-right: 22px;
+}
+
+.button:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
